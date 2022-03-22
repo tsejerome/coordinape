@@ -14,7 +14,7 @@ const schema = z
       .string()
       .min(3, 'Org name must be at least 3 characters long.'),
     protocol_id: z.number().optional(),
-    contact: z.string().min(4, 'Circle Point of Contact is Required.'),
+    //contact: z.string().min(4, 'Circle Point of Contact is Required.'),
   })
   .strict();
 
@@ -27,7 +27,7 @@ const CreateCircleForm = createForm({
     circle_name: '',
     protocol_name: '',
     protocol_id: undefined,
-    contact: '',
+    //contact: '',
   }),
   fieldKeys: Object.keys(schema.shape),
   fieldProps: {},
