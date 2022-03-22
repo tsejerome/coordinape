@@ -229,7 +229,7 @@ export async function insertCircleWithAdmin(
             name: circleInput.circle_name,
             protocol_id: circleInput.protocol_id,
             users: insertUsers,
-            contact: circleInput.contact,
+            // contact: circleInput.contact,
           },
         },
         circleReturn,
@@ -246,7 +246,7 @@ export async function insertCircleWithAdmin(
               data: [
                 {
                   name: circleInput.circle_name,
-                  contact: circleInput.contact,
+                  // contact: circleInput.contact,
                   users: insertUsers,
                 },
               ],
