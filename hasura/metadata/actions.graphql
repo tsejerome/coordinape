@@ -23,6 +23,10 @@ type Mutation {
 }
 
 type Mutation {
+  deleteUser(payload: DeleteUserInput!): ConfirmationResponse
+}
+
+type Mutation {
   logoutUser: LogoutResponse
 }
 
@@ -118,6 +122,11 @@ input CreateEpochInput {
   grant: Float
 }
 
+input DeleteUserInput {
+  circle_id: Int!
+  address: String!
+}
+
 type CreateCircleResponse {
   id: Int!
 }
@@ -152,4 +161,8 @@ type VouchOutput {
 
 type EpochResponse {
   id: ID!
+}
+
+type ConfirmationResponse {
+  success: Boolean!
 }
